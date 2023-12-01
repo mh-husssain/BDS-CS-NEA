@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.background-image{
+    background-image:url("Images/Index.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    height:100vh;
+}
+
+.Title{
+    padding-top: 6%;
+    padding-right: 50%;
+    padding-left: 4%;
+    text-align:left;
+    font-size: 17.5mm;
+    font-weight:800;
+    font-synthesis: style;            
+
+    color:rgb(206, 253, 255);
+    font-style:italic;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.regBox{
+    background-image: transparent;
+    box-shadow: -2px 2px 20px 10px black;
+
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 60%;
+    padding-top: 2%;    
+    padding-bottom: 3%;
+}
+.subheading{
+    color:rgb(255, 255, 255);
+    font-size: 1cm;
+    font-weight: lighter;
+    text-decoration: underline;
+    padding-top: 7%;
+    padding-left: 7%;
+    padding-bottom: 3%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.inputTag{
+    margin-left: 7%;
+    margin-top: 3%;
+    font-size: larger;
+
+    color:rgb(255, 255, 255);
+}
+.inputStyling{
+    border: none;
+    outline: none;
+    border-bottom: 3px solid red;
+    background-color: ■lightgray;
+    width: 150px;
+    transition: width 0.5s ease-in-out;
+    filter: invert(1);
+
+    padding-left: 40px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-left: 50px;
+
+    font-weight: 500;
+    font-size: large;
+}
+.inputStyling:hover{
+    filter: brightness(1);
+}
+.inputStyling:focus{
+    padding-left: 40px;
+    padding-right: 10px;
+    border-bottom: 3px solid red;
+    background-color: white;
+    filter: invert(1);
+    width: 230px;
+}
+.inputStyling:required:valid{
+    width: 230px;
+}
+.inputStyling:required:invalid{
+    border-bottom: 3px solid rgb(0, 225, 255);
+}
+.email{
+    background-image: url(Images/person.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 46px;
+}
+.passw{
+    background-image: url(Images/passw.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 18px;
+}
+.login{
+    margin-top: 11%;
+    margin-left: 35%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+    background-image: url(Images/Button.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position: center;
+
+    font-size: x-large;
+    color:rgb(157, 250, 255);
+        
+    border: 4px solid hsl(244, 15%, 78%);
+    border-top-right-radius: 5cm;
+    border-bottom-right-radius: 5cm;
+    border-top-left-radius: 5cm;
+    border-bottom-left-radius: 5cm;
+    box-shadow: -2px 2px 8px 10px black;
+    opacity: 0.8;
+    filter: brightness(0.8) contrast(1) saturate(4);
+}
+.login:hover{
+    opacity: 1;
+    filter: contrast(1) saturate(4);
+    outline: -webkit-focus-ring-color auto 1px;
+    cursor: pointer;
+}
+.login:active{
+    filter: brightness(0.9) saturate(3);
+    transform: translateY(2px);
+}
+
+
+
