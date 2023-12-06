@@ -1,0 +1,47 @@
+{% extends 'menu.html' %}
+
+{% block title %}
+    {{ request.user.username }}'s Balance
+{% endblock %}
+{% block css %}{% load static %}
+<link rel="stylesheet" href="{%static '/menu/static/balance.css' %}">
+{% endblock %}
+
+{% block content %}{% load static %}
+    <div class="box" id="balance">
+        <ul>
+            <li class="balance">
+                <li><b>Balance</b></li>
+                <li><b>£{{request.user.balance}}</b></li>
+            </li>
+            <li id="forms" class="hidden">
+                <form method="post">{% csrf_token %}      
+                    <input id="deposit" name="deposit" class="inputStyling" type="text" placeholder="00.00"><br>
+                    {% if messages %}
+                        {% for message in messages %}
+                        <p{% if message.tags %} class="error"{% endif %}>{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
+                    <input type="submit" name="form" value="DEPOSIT" class="submit">
+                </form>
+                <form method="post">{% csrf_token %}        
+                    <input id="withdraw" name="withdraw" class="inputStyling" type="text" placeholder="00.00"><br>
+                    {% if messages %}
+                        {% for message in messages %}
+                        <p{% if message.tags %} class="error"{% endif %}>{{ message }}</p>
+                        {% endfor %}
+                    {% endif %}
+                    <input type="submit" name="form" value="WITHDRAW" class="submit">
+                </form>
+            </li>
+        </ul>
+    </div>
+    <div id="clear" class="clear">
+        <br><p>The current UK inflation rate is: {{inflation}}</p><br>
+        <p>The current UK interest rate is: {{interest}}</p><br><br><br><br><br>
+        <br><br><br><p>With Current Interest, you save:<br>£{{saving}}</p>
+        <p>Your total savings after inflation is: £{{ total }}</p>
+    </div>
+
+<script src="{%static '/menu/static/balance.js' %}"></script>  
+{% endblock %}

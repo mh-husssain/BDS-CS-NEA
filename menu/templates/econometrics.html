@@ -1,0 +1,30 @@
+{% extends 'menu.html' %}
+
+{% block title %}
+    Econometrics
+{% endblock %}
+{% block css %}{%load static%}
+<link rel="stylesheet" href="{%static '/menu/static/econometrics.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="box">
+    <b>Econometrics</b>
+    <br>
+    
+    <div>
+        <canvas class="graph" id="interestChart"></canvas><br><br>
+        <p>
+The trend of interest rates from 2008 to the present day has been generally downward. The Bank of England's data shows that the rates fell sharply in 2009 and remained low until 2018, when they began to rise gradually. However, due to the pandemic, rates fell to a new historic low in 2020 and have remained low since then. In terms of recent quartiles, interest rates have been steadily declining since the second quarter of 2021.
+        </p>
+        <p class="text1">
+The impact of these interest rate trends on saving is significant. Low interest rates mean that savers earn less on their deposits, which can discourage saving and encourage spending instead. However, low rates can also stimulate borrowing and investment, which can lead to economic growth. On the other hand, higher rates can encourage saving but also discourage borrowing and spending, which can lead to slower economic growth. Overall, interest rates have a significant impact on the economy and the decisions of savers and investors alike.
+        </p>
+    </div>
+    
+</div>
+<script type="module" src="{%static '/menu/static/econometrics.js' %}"></script>  
+{% endblock %}
+
+

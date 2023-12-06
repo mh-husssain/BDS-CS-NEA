@@ -1,0 +1,37 @@
+{% extends 'menu.html' %}
+
+{% block title %}
+    Main Menu
+{% endblock %}
+{% block css %}{%load static%}
+<link rel="stylesheet" href="{%static '/menu/static/menu.css' %}">
+{% endblock %}
+
+{% block content %}{% load static%}
+
+        <div class="boxDiv">
+            <div class="boxProfile" id="Profile">
+                <b>User Personalisation</b>
+                <div id="personalisation" class="hidden">
+                    <form id="user", method="post" enctype="multipart/form-data">
+                        <div>{% csrf_token %}{{ form.media }}
+                            <input required id="upload" type="image" src="{{user.pfp.url}}" class="pfp1">
+                            <!--<button id="upload" class="pfp1" style="background-image: url({{user.pfp.url}});"></button>-->
+                            <input name="file" id="file" type="file" class="hidden" accept="image/png, image/jpeg">
+                        </div>
+                        <input required name="username" class="inputStyling" type="text" placeholder="{{request.user.username}}">
+                        <br><input id="save" type="submit" class="submit">
+                    </form>
+                </div>
+                            
+            </div>
+            <a href="balance"><div class="box clear"><b>Balance</b></div></a>
+            <a href="econometrics"><div class="box clear"><b>Econometrics</b></div></a>
+            <div class="box clear"><b>Data Forecast</b></div>
+        </div>
+    </div>
+    <script src="{%static '/menu/static/menu.js' %}"></script>    
+    <!--<div id="display"></div>-->
+{% endblock %}
+
+

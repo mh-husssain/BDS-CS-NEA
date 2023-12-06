@@ -1,0 +1,36 @@
+{% extends 'menu.html' %}
+{% block title %}
+    About Us
+{% endblock %}
+{% block css %}{% load static %}
+<link rel="stylesheet" href="{%static '/menu/static/aboutUs.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="box">
+    <h1>Welcome to BDS, {{ request.user.username}}</h1>
+    <h1>Here is some information About Us</h1><br><br>
+    <p>At Banking Digital Solutions, we pride ourselves with an innovative approach to your problems.
+        <br><br>As our clients' financial wellbeing is our top priority:<br>
+       We aim to provide you with important information which will better your financial situation.
+       So what do we have to offer?
+    </p><br>
+    <ul>
+        <b>Your own free Account!</b>
+        <p>By registering your email with BDS, we will be giving out free access to users who want to learn more about their money!</p><br>
+            <li>Customisation of your Profile.</li>
+            <li>Choose an exciting Profile Picture to catch attention!</li>
+            <li>Unlimited allowances to change your Username!</li>
+            <br><br>
+
+        <b>Banking Transactions & Savings Calculator</b>
+        <p>BDS offers an exlusive range of financial analysis tools to assist you. These include:</p><br>
+            <li>Access to our bank transaction platform</li>
+            <li>Access to real-time live figures!</li>
+            <li>Your personal bank-rate savings calculator.</li>
+            
+    </ul>
+    <br><br><br><br><br>
+</div>
+    
+{% endblock %}
