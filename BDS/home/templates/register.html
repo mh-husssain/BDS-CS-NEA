@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="ufc-8">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>BDS: Register</title>
+    {% load static %}
+    <link rel="stylesheet" href="{%static '../static/register.css' %}">
+</head>
+
+<body>
+    <div class="background-image">
+        <p class="Title">Welcome to Banking Digital Solutions:</p>
+        <form id="formReg" method="post" class="regBox">
+            {% csrf_token %}
+            <div id="inputFields">
+                <b class="subheading">Register</b>
+                <p class="inputTag">Enter Email:<input required name="email" class="inputStyling email" type="email" placeholder="Email Address..." ></p>
+                <p class="inputTag">Enter Password:<input required name="password" class="inputStyling passw" type="password" placeholder="Password..."></p>
+                {% if messages %}
+                <div class="inputTag">
+                    {% for message in messages %}
+                    <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <button type="submit" class="register"><b>Register</b></button>
+            </div>
+        </form>
+    </div>
+    <!--<script src="{%static '../static/register.js' %}"></script>-->
+</body>
+</html>

@@ -1,0 +1,115 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+a{ 
+  text-decoration: none; 
+}
+b{
+  font-family:'Times New Roman', Times, serif;
+  font-size: xx-large;
+  font-weight: 100;
+  color: rgb(224, 230, 193);
+}
+header{
+  position: sticky;
+  top: 0;
+  z-index:100;
+  background-image: url(Images/h2.png);
+  height: 14vh;
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: hue-rotate(190deg);
+}
+header::after{
+  content: '';
+  display: table;
+  clear: both;
+}
+.navBar{
+	width: 90%;
+  padding-left: 4%;
+  padding-right: 1%;
+  padding-top: 1vh;
+  padding-bottom: 90px;
+	margin: 0 auto;
+}
+
+.profile{
+  margin-top: -8px;
+  float: left;
+  cursor:not-allowed;
+}
+.profile:hover{
+  filter: contrast(1) opacity(0.6);
+  outline: -webkit-focus-ring-color auto 1px;
+  color: rgb(144, 232, 236);
+}
+.pfp{
+  filter: hue-rotate(170deg) brightness(1) !important;
+  border-top-right-radius: 52%;
+  border-top-left-radius: 52%;
+  border-bottom-left-radius: 52%;
+  border-bottom-right-radius: 52%;
+  border: 3px solid rgb(130, 103, 20);
+
+  vertical-align:middle;
+  margin-right: 5px;
+  width: 13vh;
+  height: 13vh;
+}
+.username{
+  color: rgb(59, 118, 160);
+  font-size: 45px;
+  vertical-align: middle;
+}
+
+nav{
+  float: right;
+  margin-top: 1vh;
+}
+nav ul{
+  margin-top: 1vh;
+  padding: 0;
+  list-style: none;
+}
+nav li{
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 3vh;
+  position: relative;
+}
+nav a{
+  color: rgb(59, 118, 160);
+  font-family: 'Segoe UI';
+  font-size: large;
+}
+nav a:hover{
+  cursor: pointer;
+  outline: -webkit-focus-ring-color auto 1px;
+}
+nav a::before{
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: rgb(59, 118, 160);
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+nav a:hover::before{
+  width: 100%;
+}
+
+.bodybg{
+  padding-top: 1vh;
+  background-image: url(Images/body4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 85vh;
+}
