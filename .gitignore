@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local database (recreate with: python manage.py migrate)
+db.sqlite3
+
+# User-uploaded profile pictures; the default avatar is kept
+BDS/BDS/media/images/*
+!BDS/BDS/media/images/person.jpeg
+
+# Node packages (install with: npm install)
+node_modules/
+
+# Local tools and environment
+*.exe
+.env
