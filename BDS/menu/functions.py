@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup
 ### ~~~ Money Input Validation for Text ~~~ ###
 ### ~~~ Programmed by Mo Hisham Hussain ~~~ ###
 def validate(inp): # Validate money Format
+    if not inp: # An empty or missing amount is never valid
+        return False
     valid = True
     decimal = None
     decimalPlaces = -1

@@ -1,4 +1,6 @@
-import data from '../static/BoE.json' assert { type: 'json' };
+// Load the Bank Rate history (same file, resolved relative to this module)
+const response = await fetch(new URL('../static/BoE.json', import.meta.url));
+const data = await response.json();
 
 // Create the chart
 // Get the canvas element and its context
